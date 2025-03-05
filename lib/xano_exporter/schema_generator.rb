@@ -25,7 +25,7 @@ module XanoExporter
 
         tables_data.each do |table_data|
           file.puts ""
-          file.puts "  create_table \"#{table_data[:name]}\", force: :cascade do |t|"
+          file.puts "  create_table \"xano__#{table_data[:name]}\", force: :cascade do |t|"
 
           table_data[:headers].each do |header|
             next if header == 'id'
@@ -42,7 +42,7 @@ module XanoExporter
           table_data[:headers].each do |header|
             if header.end_with?('_id') && header != 'id'
               file.puts ""
-              file.puts "  add_index \"#{table_data[:name]}\", [\"#{header}\"]"
+              file.puts "  add_index \"xano__#{table_data[:name]}\", [\"#{header}\"]"
             end
           end
         end
