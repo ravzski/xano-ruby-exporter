@@ -1,0 +1,20 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/csv_exports/
+schema.rb
+app/models/
+
+# rspec failure tracking
+.rspec_status
+
+# Gem builds
+*.gem
+
+/outputs
+/csv_exports
